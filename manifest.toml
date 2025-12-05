@@ -37,13 +37,10 @@ ram.runtime = "50M"
     type = "domain"
 
     [install.path]
-    # this is a generic question - ask strings are automatically handled by YunoHost's core
     type = "path"
     default = "/example"
 
     [install.init_main_permission]
-    # this is a generic question - ask strings are automatically handled by YunoHost's core
-    # This won't be saved as setting and will instead be used to initialize the SSOwat permission
     type = "group"
     default = "visitors"
 
@@ -55,12 +52,9 @@ ram.runtime = "50M"
     default = "fr"
 
     [install.admin]
-    # this is a generic question - ask strings are automatically handled by YunoHost's core
     type = "user"
 
     [install.password]
-    # this is a generic question - ask strings are automatically handled by YunoHost's core
-    # Note that user-provided passwords questions are not automatically saved as setting
     help.en = "Use the help field to add an information for the admin about this question."
     help.fr = "Utilisez le champ aide pour ajouter une information à l'intention de l'administrateur à propos de cette question."
     type = "password"
@@ -71,7 +65,7 @@ ram.runtime = "50M"
 
     [resources.sources.main]
     url = "https://github.com/seaweedfs/seaweedfs/releases/download/4.01/linux_amd64_full.tar.gz"
-    sha256 = "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
+    sha256 = "1deeecfddfe0ba14cbd4c46dc22eb0364a53ff82c89d382643636c3e5f6b2248"
 
     # autoupdate.strategy = "latest_github_tag"
 
@@ -85,12 +79,3 @@ ram.runtime = "50M"
     main.url = "/"
 
     [resources.ports]
-
-    [resources.apt]
-    # This will automatically install/uninstall the following apt packages
-    # and implicitly define the $phpversion setting as 8.0 (if phpX.Y-foobar dependencies are listed)
-    packages = "mariadb-server, deb1, deb2, php8.3-foo, php8.3-bar"
-
-    [resources.database]
-    # This will automatically provision/deprovison a MySQL DB and store the corresponding credentials in settings $db_user, $db_name, $db_pwd
-    type = "mysql"
